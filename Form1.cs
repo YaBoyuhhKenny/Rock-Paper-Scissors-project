@@ -21,7 +21,7 @@ namespace Rock_Paper_Scissors_project
         int wins = 0;
         int losses = 0;
         int ties = 0;
-        int chips = 1000;
+      
 
 
         private void btnRock_Click(object sender, EventArgs e)
@@ -58,7 +58,7 @@ namespace Rock_Paper_Scissors_project
                 picRock.Visible = true;
                 picPaper.Visible = false;
             }
-            
+            UpdateStats();
         }
 
         private void btnPaper_Click(object sender, EventArgs e)
@@ -94,7 +94,7 @@ namespace Rock_Paper_Scissors_project
                 picRock.Visible = false;
                 picPaper.Visible = true;
             }
-
+            UpdateStats();
         }
 
         private void btnScissors_Click(object sender, EventArgs e)
@@ -130,13 +130,15 @@ namespace Rock_Paper_Scissors_project
                 picRock.Visible = false;
                 picPaper.Visible = false;
             }
-
+            UpdateStats();
         }
 
-        private void btnStats_Click(object sender, EventArgs e)
+        void UpdateStats()
         {
             lblStats.Text = ($"Wins:{wins} losses:{losses} ties:{ties}");
         }
+
+        
     }
 
 }

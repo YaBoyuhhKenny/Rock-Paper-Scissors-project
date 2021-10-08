@@ -38,7 +38,6 @@
             this.picPaper = new System.Windows.Forms.PictureBox();
             this.picBlocker = new System.Windows.Forms.PictureBox();
             this.picScissors = new System.Windows.Forms.PictureBox();
-            this.btnStats = new System.Windows.Forms.Button();
             this.lblStats = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picRock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPaper)).BeginInit();
@@ -141,25 +140,12 @@
             this.picScissors.TabIndex = 9;
             this.picScissors.TabStop = false;
             // 
-            // btnStats
-            // 
-            this.btnStats.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnStats.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStats.ForeColor = System.Drawing.Color.Gold;
-            this.btnStats.Location = new System.Drawing.Point(91, 346);
-            this.btnStats.Name = "btnStats";
-            this.btnStats.Size = new System.Drawing.Size(157, 89);
-            this.btnStats.TabIndex = 12;
-            this.btnStats.Text = "Click to generate the current game stats\r\n";
-            this.btnStats.UseVisualStyleBackColor = false;
-            this.btnStats.Click += new System.EventHandler(this.btnStats_Click);
-            // 
             // lblStats
             // 
             this.lblStats.AutoSize = true;
             this.lblStats.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStats.ForeColor = System.Drawing.Color.Gold;
-            this.lblStats.Location = new System.Drawing.Point(122, 313);
+            this.lblStats.Location = new System.Drawing.Point(115, 294);
             this.lblStats.Name = "lblStats";
             this.lblStats.Size = new System.Drawing.Size(0, 19);
             this.lblStats.TabIndex = 13;
@@ -171,7 +157,6 @@
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(933, 514);
             this.Controls.Add(this.lblStats);
-            this.Controls.Add(this.btnStats);
             this.Controls.Add(this.picBlocker);
             this.Controls.Add(this.picScissors);
             this.Controls.Add(this.picPaper);
@@ -204,7 +189,6 @@
         private System.Windows.Forms.PictureBox picPaper;
         private System.Windows.Forms.PictureBox picBlocker;
         private System.Windows.Forms.PictureBox picScissors;
-        private System.Windows.Forms.Button btnStats;
         private System.Windows.Forms.Label lblStats;
     }
 }
