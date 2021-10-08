@@ -38,8 +38,8 @@
             this.picPaper = new System.Windows.Forms.PictureBox();
             this.picBlocker = new System.Windows.Forms.PictureBox();
             this.picScissors = new System.Windows.Forms.PictureBox();
-            this.lblWins = new System.Windows.Forms.Label();
-            this.lblLosses = new System.Windows.Forms.Label();
+            this.btnStats = new System.Windows.Forms.Button();
+            this.lblStats = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picRock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPaper)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBlocker)).BeginInit();
@@ -141,25 +141,28 @@
             this.picScissors.TabIndex = 9;
             this.picScissors.TabStop = false;
             // 
-            // lblWins
+            // btnStats
             // 
-            this.lblWins.AutoSize = true;
-            this.lblWins.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWins.ForeColor = System.Drawing.Color.Gold;
-            this.lblWins.Location = new System.Drawing.Point(116, 311);
-            this.lblWins.Name = "lblWins";
-            this.lblWins.Size = new System.Drawing.Size(0, 19);
-            this.lblWins.TabIndex = 10;
+            this.btnStats.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnStats.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStats.ForeColor = System.Drawing.Color.Gold;
+            this.btnStats.Location = new System.Drawing.Point(91, 346);
+            this.btnStats.Name = "btnStats";
+            this.btnStats.Size = new System.Drawing.Size(157, 89);
+            this.btnStats.TabIndex = 12;
+            this.btnStats.Text = "Click to generate the current game stats\r\n";
+            this.btnStats.UseVisualStyleBackColor = false;
+            this.btnStats.Click += new System.EventHandler(this.btnStats_Click);
             // 
-            // lblLosses
+            // lblStats
             // 
-            this.lblLosses.AutoSize = true;
-            this.lblLosses.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLosses.ForeColor = System.Drawing.Color.Crimson;
-            this.lblLosses.Location = new System.Drawing.Point(754, 311);
-            this.lblLosses.Name = "lblLosses";
-            this.lblLosses.Size = new System.Drawing.Size(0, 19);
-            this.lblLosses.TabIndex = 11;
+            this.lblStats.AutoSize = true;
+            this.lblStats.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStats.ForeColor = System.Drawing.Color.Gold;
+            this.lblStats.Location = new System.Drawing.Point(122, 313);
+            this.lblStats.Name = "lblStats";
+            this.lblStats.Size = new System.Drawing.Size(0, 19);
+            this.lblStats.TabIndex = 13;
             // 
             // rockPaperScissors
             // 
@@ -167,8 +170,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(933, 514);
-            this.Controls.Add(this.lblLosses);
-            this.Controls.Add(this.lblWins);
+            this.Controls.Add(this.lblStats);
+            this.Controls.Add(this.btnStats);
             this.Controls.Add(this.picBlocker);
             this.Controls.Add(this.picScissors);
             this.Controls.Add(this.picPaper);
@@ -201,8 +204,8 @@
         private System.Windows.Forms.PictureBox picPaper;
         private System.Windows.Forms.PictureBox picBlocker;
         private System.Windows.Forms.PictureBox picScissors;
-        private System.Windows.Forms.Label lblWins;
-        private System.Windows.Forms.Label lblLosses;
+        private System.Windows.Forms.Button btnStats;
+        private System.Windows.Forms.Label lblStats;
     }
 }
 

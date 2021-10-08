@@ -18,11 +18,17 @@ namespace Rock_Paper_Scissors_project
             InitializeComponent();
         }
 
+        int wins = 0;
+        int losses = 0;
+        int ties = 0;
+        int chips = 1000;
+
+
         private void btnRock_Click(object sender, EventArgs e)
         {
             int cpuChoice = generator.Next(1,4);
-            int wins = 0;
-            int losses = 0;
+            
+            
 
             if (cpuChoice == 3)
             {
@@ -42,6 +48,15 @@ namespace Rock_Paper_Scissors_project
                 picRock.Visible = false;
                 picPaper.Visible = true;
                 
+            }
+
+            if (cpuChoice == 1)
+            {
+                ties += 1;
+                picBlocker.Visible = false;
+                picScissors.Visible = false;
+                picRock.Visible = true;
+                picPaper.Visible = false;
             }
             
         }
@@ -49,8 +64,7 @@ namespace Rock_Paper_Scissors_project
         private void btnPaper_Click(object sender, EventArgs e)
         {
             int cpuChoice = generator.Next(1, 4);
-            int wins = 0;
-            int losses = 0;
+            
 
             if (cpuChoice == 1)
             {
@@ -71,14 +85,22 @@ namespace Rock_Paper_Scissors_project
                 picScissors.Visible = true;
                 
             }
-            
+
+            if (cpuChoice == 2)
+            {
+                ties += 1;
+                picBlocker.Visible = false;
+                picScissors.Visible = false;
+                picRock.Visible = false;
+                picPaper.Visible = true;
+            }
+
         }
 
         private void btnScissors_Click(object sender, EventArgs e)
         {
             int cpuChoice = generator.Next(1, 4);
-            int wins = 0;
-            int losses = 0;
+            
 
             if (cpuChoice == 2)
             {
@@ -100,6 +122,20 @@ namespace Rock_Paper_Scissors_project
                 
             }
             
+            if (cpuChoice == 3)
+            {
+                ties += 1;
+                picBlocker.Visible = false;
+                picScissors.Visible = true;
+                picRock.Visible = false;
+                picPaper.Visible = false;
+            }
+
+        }
+
+        private void btnStats_Click(object sender, EventArgs e)
+        {
+            lblStats.Text = ($"Wins:{wins} losses:{losses} ties:{ties}");
         }
     }
 
